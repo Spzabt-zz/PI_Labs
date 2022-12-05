@@ -22,39 +22,44 @@
     <thead>
     <tr>
         <th>№</th>
-        <th>Середній бал</th>
-        <th>К-ть бюджетників</th>
-        <th>Недобор</th>
-        <th>К-ть котрактників</th>
+        <th>Середній бал вступивших на бюджет</th>
+        <th>Кількість бюджетників</th>
+        <th>Недобір</th>
+        <th>Число контрактників</th>
         <th>ВНЗ</th>
     </tr>
     </thead>
     <tbody>
     <?php
-    $str = htmlspecialchars($_POST['str']);
-    $f = fopen("data.txt", "r");
-    while (!feof($f)) {
-        $row = fgets($f);
-        if (strcasecmp($row, $str) == -3) {
-            $size = fgets($f);
-            for ($i = 0; $i < $size; $i++) {
-                $avg = (float)fgets($f);
-                $ent = (int)fgets($f);
-                $contract = (int)fgets($f);
-                $univ = fgets($f);
-                echo "<tr>
-				  <th scope='row'>$i</th>
-				  <td>$avg</td>
-				  <td>$ent</td>
-				  <td>-</td>
-				  <td>$contract</td>
-				  <td>$univ</td>
-				 </tr>";
+    $napr = htmlspecialchars($_POST['str']);
+    $data = fopen("data.txt", "r");
+
+    while (!feof($data)) {
+
+        $firstRow = fgets($data);
+        if (trim($firstRow) === trim($napr)) {
+
+            $count = fgets($data);
+            for ($i = 1; $i <= $count; $i++) {
+                $thirdRow = (float)fgets($data);
+                $fourthRow = (int)fgets($data);
+                $fifthRow = (int)fgets($data);
+                $sixthRow = fgets($data);
+
+                echo '<tr>';
+                echo '<th scope="row">' . $i . '</th>';
+                echo '<td>' . $thirdRow . '</td>';
+                echo '<td>' . $fourthRow . '</td>';
+                echo '<td>-</td>';
+                echo '<td>' . $fifthRow . '</td>';
+                echo '<td>' . $sixthRow . '</td>';
+                echo '</tr>';
             }
+
             break;
         }
     }
-    fclose($f);
+    fclose($data);
     ?>
     </tbody>
 </table>
