@@ -1,0 +1,17 @@
+.label {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.select {
+    font-size: 16px;
+    padding: 5px;
+}
+
+.btn {
+    margin-top: 10px;
+    padding: 5px;
+    font-size: 15px;
+    cursor: pointer;
+}
