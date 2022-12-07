@@ -7,6 +7,7 @@ function find(e) {
         if (this.readyState === XMLHttpRequest.DONE && xhr.status === 0
             || (xhr.status >= 200 && xhr.status < 400)) {
             document.getElementById("output").innerHTML = xhr.responseText;
+            console.log(xhr.responseText);
         } else {
             console.log("Error!");
         }
