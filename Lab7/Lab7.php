@@ -16,7 +16,7 @@
     <div class="mb-3">
         <label for="search-field" class="form-label">Пошук на comfy.ua:</label>
         <input type="text" class="form-control" id="search-field" placeholder="Наприклад 'sams'"
-               onkeypress="find(event)">
+               onkeyup="find(event)" onchange="find(event)">
     </div>
     <div id="output" class="row row-cols-1 row-cols-md-2 g-4"></div>
 </div>
