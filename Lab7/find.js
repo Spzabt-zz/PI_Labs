@@ -1,4 +1,5 @@
 let delayTimer;
+
 function find(e) {
     /*clearTimeout(delayTimer);
     delayTimer = setTimeout(function() {
@@ -17,7 +18,7 @@ function find(e) {
         }*!/
     }, 1000);*/
     clearTimeout(delayTimer);
-    delayTimer = setTimeout(function() {
+    delayTimer = setTimeout(function () {
 
         const q = e.target.value;
         const xhr = new XMLHttpRequest();
