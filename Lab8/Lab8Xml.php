@@ -5,35 +5,13 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
     <title>Lab8</title>
-    <style>
-        body {
-            background: #A3DDD9;
-        }
-
-        p {
-            font-size: 25px;
-            font-weight: bold;
-            font-family: 'Relaway', sans-serif;
-        }
-
-        span {
-            font-size: 20px;
-            margin: auto;
-        }
-
-        .container {
-            font-size: 25px;
-            margin: 25px;
-            width: 50%;
-            height: 100%;
-        }
-    </style>
 </head>
 <body>
 <div class="container">
-    <p><strong>IP search</strong></p>
-    <form method="post" action="Lab8Json.php">
+    <h3>IP search</h3>
+    <form method="post" action="Lab8JsonReq.php">
         <input type="text" name="ip" id="ip-input" placeholder="IP" title="Enter IP address"/>
         <input type="submit" value="IP search"/>
     </form>
@@ -58,5 +36,7 @@
     echo '<br><span>Longitude: ' . $resultXml->lon . '</span>';
     ?>
 </div>
+
+<script src="/js/bootstrap.min.js"></script>
 </body>
 </html>

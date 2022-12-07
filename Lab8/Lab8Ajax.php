@@ -5,43 +5,13 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-
-    <style>
-        body {
-            background: #A3DDD9;
-        }
-
-        p {
-            font-size: 25px;
-            font-weight: bold;
-        }
-
-        span {
-            font-size: 20px;
-        }
-
-        div, p, span {
-            text-align: center;
-            font-family: 'Relaway', sans-serif;
-        }
-
-        .container {
-            font-size: 25px;
-            margin: 25px;
-            width: 15%;
-            height: 100%;
-        }
-
-        #validation-msg {
-            display: none;
-        }
-    </style>
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+    <title>Lab8</title>
 </head>
 <body>
 
 <div class="container">
-    <p><strong>IP search</strong></p>
+    <h3>IP search</h3>
     <input type="text" name="ip" id="ip-input" placeholder="IP" title="Enter IP address"/>
     <input type="submit" value="IP search" id="submit"/>
     <span id="validation-msg">[Invalid IP]</span>
@@ -53,7 +23,7 @@
         <span>Country code: </span>
         <span id="county-code"></span><br>
         <span>Flag:
-                <img id="flag" src=""/>
+                <img id="flag" src="" alt=""/>
             </span><br>
         <span>Region: </span>
         <span id="region"></span><br>
@@ -114,6 +84,10 @@
             dataType: 'json',
             crossDomain: true,
             success: function (res) {
+                res.postal = undefined;
+                res.city = undefined;
+                res.region_code = undefined;
+                res.country_code = undefined;
                 if (res.error) {
                     onError(res);
                     return;
@@ -134,5 +108,7 @@
         });
     });
 </script>
+
+<script src="/js/bootstrap.min.js"></script>
 </body>
 </html>
