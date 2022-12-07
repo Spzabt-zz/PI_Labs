@@ -84,10 +84,6 @@
             dataType: 'json',
             crossDomain: true,
             success: function (res) {
-                res.postal = undefined;
-                res.city = undefined;
-                res.region_code = undefined;
-                res.country_code = undefined;
                 if (res.error) {
                     onError(res);
                     return;
