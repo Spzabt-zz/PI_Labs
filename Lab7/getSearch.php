@@ -4,7 +4,7 @@ $q = $_GET["q"];
 $curl = curl_init();
 curl_setopt($curl, CURLOPT_URL, "https://comfy.ua/ua/search/?q={$q}");
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-//curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
 curl_setopt($curl, CURLOPT_HEADER, false);
 
 $html = curl_exec($curl);

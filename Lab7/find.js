@@ -1,22 +1,6 @@
 let delayTimer;
 
 function find(e) {
-    /*clearTimeout(delayTimer);
-    delayTimer = setTimeout(function() {
-        //document.querySelector(".output").style.display = "block";
-        document.getElementById("output").innerHTML = "";
-        const q = e.target.value;
-        const xhr = new XMLHttpRequest();
-        xhr.open("GET", `./getSearch?q=${q}`);
-        xhr.send();
-        xhr.onload = function() {
-            document.getElementById("output").innerHTML = xhr.responseText;
-            //document.querySelector(".loader").style.display = "none";
-        }
-        /!*xhr.onerror = function() {
-            document.querySelector(".loader").style.display = "none";
-        }*!/
-    }, 1000);*/
     clearTimeout(delayTimer);
     delayTimer = setTimeout(function () {
 

@@ -16,8 +16,9 @@
     <div class="mb-3">
         <label for="search-field" class="form-label">Пошук на comfy.ua:</label>
         <input type="text" class="form-control" id="search-field" placeholder="Наприклад 'sams'"
-               onkeyup="find(event)" onchange="find(event)">
+        onkeyup="find(event)" onchange="find(event)">
     </div>
+    <h5 class="mb-3 mt-3">Працює локально, а на Heroku - ні.</h5>
     <div id="output" class="row row-cols-1 row-cols-md-2 g-4"></div>
 </div>
 
