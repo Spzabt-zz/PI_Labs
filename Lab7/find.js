@@ -30,6 +30,7 @@ function find(e) {
                 || (xhr.status >= 200 && xhr.status < 400)) {
                 document.getElementById("output").innerHTML = xhr.responseText;
                 console.log(xhr.responseText);
+                console.log(q);
             } else {
                 console.log("Error!");
             }
